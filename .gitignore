@@ -192,8 +192,9 @@ UpgradeLog*.htm
 *.bim.layout
 *.bim_*.settings
 
-hotel-booking-mvc/appsettings.json
-hotel-booking-mvc/appsettings.[Dd]evelopment.json
+# uncomment below two lines to ignore appsettings
+# hotel-booking-mvc/appsettings.json
+# hotel-booking-mvc/appsettings.[Dd]evelopment.json
 
 
 # End of https://www.gitignore.io/api/visualstudio
