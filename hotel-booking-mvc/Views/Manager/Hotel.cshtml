@@ -1,0 +1,38 @@
+﻿@model IEnumerable<HotelBasicView>
+@{
+    ViewData["Title"] = "Hotels";
+}
+
+<style>
+    .my-color {
+        background-color: #2067A1 !important;
+    }
+</style>
+
+<div class="hotelList">
+    <div class="w-100">
+        <div class="row p-3" style="background-color: #F6FCFF; border-bottom: 1px solid #aaa;">
+            <div class="col">
+                <h2 style="color: #173752;">Listing</h2>
+            </div>            
+        </div>
+        <div class="col-sm-12 col-md-12 col-lg-12 d-flex justify-content-end mb-3">
+            <div class="d-flex justify-content-end">
+                <!-- Click on Modal Button -->                
+                <a onclick="showInPopup('@Url.Action("AddHotel", "Manager", null, Context.Request.Scheme)', 'Add a Hotel')" class="btn btn-primary mx-auto d-block mt-5 my-color">
+                    Add a Hotel
+                </a>
+
+            </div>
+        </div>
+    </div>
+    <div id="hotel-list">
+        @await Html.PartialAsync("_HotelList", Model)
+    </div>
+    
+</div>
+
+<!--Modal-->
+
+
+
